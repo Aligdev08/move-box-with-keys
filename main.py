@@ -62,12 +62,12 @@ while running:
                     if movement[direction][2]:
                         if movement[direction][0] == "x":
                             if movement["type"] == "rectangle":
-                                rectObject.x += movement[direction][1]
+                                rectObject.move_ip(movement[direction][1], 0)
                             elif movement["type"] == "circle":
                                 circleCentre = (circleCentre[0]+movement[direction][1], circleCentre[1])
                         else:
                             if movement["type"] == "rectangle":
-                                rectObject.y += movement[direction][1]
+                                rectObject.move_ip(0, movement[direction][1])
                             elif movement["type"] == "circle":
                                 circleCentre = (circleCentre[0], circleCentre[1]+movement[direction][1])
 
